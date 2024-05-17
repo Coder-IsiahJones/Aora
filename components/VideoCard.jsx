@@ -3,7 +3,6 @@ import { View, Text, TouchableOpacity, Image } from "react-native";
 import { ResizeMode, Video } from "expo-av";
 
 import { icons } from "../constants";
-import { images } from "../constants";
 
 const VideoCard = ({ title, creator, avatar, thumbnail, video }) => {
   const [play, setPlay] = useState(false);
@@ -62,8 +61,7 @@ const VideoCard = ({ title, creator, avatar, thumbnail, video }) => {
           className="w-full h-60 rounded-xl mt-3 relative flex justify-center items-center"
         >
           <Image
-            source={images.thumbnail}
-            // source={{ uri: thumbnail }}
+            source={{ uri: thumbnail }}
             className="w-full h-full rounded-xl mt-3"
             resizeMode="cover"
           />

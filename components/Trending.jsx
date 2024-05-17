@@ -9,7 +9,6 @@ import {
 import { ResizeMode, Video } from "expo-av";
 
 import { icons } from "../constants";
-import { images } from "../constants";
 
 const zoomIn = {
   0: {
@@ -57,10 +56,9 @@ const TrendingItem = ({ item, activeItem }) => {
           onPress={() => setPlay(true)}
         >
           <ImageBackground
-            // source={{
-            //   uri: item.thumbnail,
-            // }}
-            source={images.thumbnail}
+            source={{
+              uri: item.thumbnail,
+            }}
             className="w-52 h-72 rounded-[33px] my-5 overflow-hidden shadow-lg shadow-black/40"
             resizeMode="cover"
           />
