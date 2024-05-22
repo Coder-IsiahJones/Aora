@@ -12,13 +12,13 @@ import { router } from "expo-router";
 import { icons } from "../../constants";
 
 const Profile = () => {
-  const { user, setUser, setIsLogged } = useGlobalContext();
+  const { user, setUser, setIsLoggedIn } = useGlobalContext();
   const { data: posts } = useAppwrite(() => getUserPosts(user.$id));
 
   const logout = async () => {
     await signOut();
     setUser(null);
-    setIsLogged(false);
+    setIsLoggedIn(false);
 
     router.replace("/sign-in");
   };
